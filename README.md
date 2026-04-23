@@ -163,6 +163,38 @@ flowchart LR
 
 ---
 
+## Prerequisites
+
+| 依赖 | 版本要求 | 必需/可选 |
+|---|---|---|
+| Node.js | >= 18 | 必需 |
+| Python | >= 3.10 | 仅 SQL 功能需要 |
+| uv | latest | 仅 SQL 功能需要 |
+
+> 不使用 SQL 查询/编排功能时，可跳过 Python 和 uv，1052 OS 其他功能正常使用。
+
+### 安装 uv
+
+```bash
+# macOS / Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Windows (PowerShell)
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# 或通过 pip
+pip install uv
+```
+
+### SQL 功能依赖安装
+
+```bash
+cd backend
+uv sync
+```
+
+---
+
 ## Quick Start
 
 ### 1. Clone
